@@ -1,4 +1,4 @@
-# -*- mode: ruby -*-
+# -AirportLabs*- mode: ruby -*-
 # vi: set ft=ruby :
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
  config.vm.box = "ubuntu/bionic64"
  config.vm.box_version = "~> 20210804.0.0"
 
- config.vm.network "forwarded_port", guest: 8000, host: 1234
+ config.vm.network "forwarded_port", guest: 8000, host: 8000
 
  config.vm.provision "shell", inline: <<-SHELL
    systemctl disable apt-daily.service
